@@ -1,12 +1,12 @@
 <!--
 Requirements
-[  ] Google Font OR Uploaded Font
+[ yes ] Google Font OR Uploaded Font
 [  ] font-size OR font-style 
 [  ] Five CSS Rules
-[  ] Three Images
+[yes] Three Images
 
 Select ONE Additional Feature to Add  
-[ no ] Feature 1 - Include a Static Background Image
+[ yes ] Feature 1 - Include a Static Background Image
 [ no ] Feature 2 - Use a unique border-radius
 [ no ] Feature 3 - Use width and margin CSS Properties
 [ no ] Feature 4 - Include at least one more additional HTML page
@@ -14,32 +14,120 @@ Select ONE Additional Feature to Add
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Unit 4 Project</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background-image: url("https://www.creativefabrica.com/wp-content/uploads/2021/04/08/Colorful-Gradient-Liquid-Background-Graphics-10556711-2-580x387.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: "Concert One", sans-serif;
+        text-align: center;
+      }
+      h1 {
+        background-color: #fcd0e4;
+      }
+      thead {
+        background-color: #e0ebeb;
+      }
+      td {
+        text-align: center;
+      }
+    </style>
+  </head>
 
-<head>
-  <title>Unit 4 Project</title>
-  <meta charset="utf-8">
-  <style>
-  </style>
-</head>
-  
-<body>
-<h1>
-  <center>My Drink Reviews</center>
-  </h1>
-  <table>
-    <thead> 
-    <tr>
-      <th> Dr. pepper</th>
-      <th>Milkis</th>
-      <th>YouUs Peach Aid</th>
-      <th>Ramune</th>
-      </tr>
-    </thead>
-  </table>
-  
-  
-  
- 
+  <body>
+    <h1>My Drink Reviews</h1>
 
-</body>
+    <center>
+      <table>
+        <thead>
+          <tr>
+            <th>Dr. pepper</th>
+            <th>Milkis</th>
+            <th>YouUs Peach Aid</th>
+            <th>Ramune</th>
+            <th>Baja Blast Mountain Dew</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/3/36/Dr_Pepper_0%2C33l_Dose_Classic.png"
+                width="180"
+                alt="Dr.Pepper"
+              />
+            </td>
+            <td>
+              <img
+                src="https://cdn.glitch.global/1deb7e0e-1d46-4b0d-aa5f-7f2e3f128014/G03.png?v=1730388650902"
+                width="350"
+                alt="milki"
+              />
+            </td>
+
+            <td>
+              <img
+                src="https://hmartus.vtexassets.com/arquivos/ids/168797/880802403329--1-.png?v=638572729686770000"
+                width="300"
+                alt="Peach Aid"
+              />
+            </td>
+            <td>
+              <img
+                src="https://cdn.glitch.global/1deb7e0e-1d46-4b0d-aa5f-7f2e3f128014/71qBJRzD-UL.png?v=1730389113167"
+                width="320"
+                alt="Ramune"
+              />
+            </td>
+            <td>
+              <img
+                src="https://cdn.glitch.global/1deb7e0e-1d46-4b0d-aa5f-7f2e3f128014/0729f09c-2392-4057-a461-06965ce98344.730bbba0197e228c0bedad3593287210%20copy.png?v=1730389326501"
+                width="300"
+                alt="Mountain Dew"
+              />
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>
+              9/10 <br />
+              It's only good from the can
+            </td>
+            <td>
+              7/10 <br />
+              It was pretty good but I wouldn't <br />
+              grab at it
+            </td>
+            <td>
+              4/10 <br />
+              To be fair I found out I was supposed to get a cup of ice with
+              <br />
+              it but I feel like it still would've been bad <br />
+              Do not recommend
+            </td>
+            <td>
+              10/10 <br />
+              So good I love this drink
+            </td>
+            <td>
+              2/10 <br />
+              I tried a sip of my friends and it was so nasty <br />
+              don't get it
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+  </body>
 </html>
