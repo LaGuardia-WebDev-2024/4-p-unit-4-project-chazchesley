@@ -1,15 +1,17 @@
-<!--
+<!-- Unit 5 Project
 Requirements
-[ yes ] Google Font OR Uploaded Font
-[  ] font-size OR font-style 
-[  ] Five CSS Rules
-[yes] Three Images
+[ yes ] <div> and <span>
+[ yes ] height: and width:
+[ yes ] margin: and padding: 
+[ yes ] Three Images
 
 Select ONE Additional Feature to Add  
-[ yes ] Feature 1 - Include a Static Background Image
-[ no ] Feature 2 - Use a unique border-radius
-[ no ] Feature 3 - Use width and margin CSS Properties
-[ no ] Feature 4 - Include at least one more additional HTML page
+[ yes ] Feature 1 - Flexbox
+[ yes ] Feature 2 - Flip Card
+[ no ] Feature 3 - Navbar
+[ no ] Feature 4 - Shaking Animation
+[ no ] Feature 5 - Gradient Background
+[ no ] Feature 6 - Spotify Playlist
 -->
 
 <!DOCTYPE html>
@@ -18,122 +20,146 @@ Select ONE Additional Feature to Add
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"
       rel="stylesheet"
     />
-    <title>Unit 4 Project</title>
+    <title>Unit 5 Project</title>
     <meta charset="utf-8" />
     <style>
       body {
-        background-image: url("https://www.creativefabrica.com/wp-content/uploads/2021/04/08/Colorful-Gradient-Liquid-Background-Graphics-10556711-2-580x387.png");
+        background-image: url("https://wallpapers.com/images/hd/sprinkles-background-2htqrooolgzw8r9p.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        font-family: "Concert One", sans-serif;
         text-align: center;
+        font-family: "Marck Script", cursive;
+      }
+
+      .flip-card {
+        background-color: transparent;
+        width: 400px;
+        height: 500px;
+        perspective: 1000px;
+        margin: auto;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        font-size: 40px;
+      }
+
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      .flip-card-back {
+        background-color: pink;
+        color: #c20b7d;
+        transform: rotateY(180deg);
+      }
+      #title {
+        color: #c20b7d;
       }
       h1 {
-        background-color: #fcd0e4;
-        font-size: 40px;
-        color: #61023d;
+        font-size: 50px;
+        background-color: #bbe5f0;
       }
-      thead {
-        background-color: #e0ebeb;
+      h3 {
+        font-size: 35px;
+        background-color: #bbe5f0;
+        width: 650px;
+        margin: auto;
       }
-      td {
+      #gifts {
+        font-size: 45px;
+        color: #53241a;
+        background-color: #f5e7ae;
+        width: 200px;
+        margin: auto;
+      }
+      .flexgive {
+        display: flex;
+        justify-content: center;
+      }
+      .flexgive img {
+        background-color: #cc2d7f;
+        margin: 40px;
+        padding: 5px;
+        font-size: 30px;
         text-align: center;
       }
-      table {
-        font-size: 25px;
-        color: #021d61;
+      p {
+        background-color: #e8c5eb;
       }
     </style>
   </head>
-
   <body>
-    <h1>My Drink Reviews</h1>
+    <span id="title">
+      <h1>D🍩nuts' Birthday Invitation!</h1>
+      <h3>You're invited to my cats 8th birthday🐱</h3>
+      <br />
+      &nbsp;
+    </span>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://cdn.glitch.global/b6821e39-bfc4-432a-9dbb-fadc98741fc3/donutbday.jpeg?v=1732206264342"
+            alt="Avatar"
+            style="width: 400px; height: 500px; object-fit: cover"
+          />
+        </div>
+        <div class="flip-card-back">
+          <h1>Donuts' Birthday</h1>
+          <p>Catnip World</p>
+          <p>12/31/24</p>
+          <p>Gift required</p>
+        </div>
+      </div>
+    </div>
+    <br />
+    &nbsp;
+    <details>
+      <summary><p id="gifts">Gift ideas (click here)</p></summary>
+      <div class="flexgive">
+        <img
+          src="https://media.tiffany.com/is/image/Tiffany/EcomItemM/pet-collar-60596603_980378_ED.jpg?&op_usm=1.0,1.0,6.0&$cropN=0.1,0.1,0.8,0.8&defaultImage=NoImageAvailableInternal&"
+          width="250"
+          height="350"
+        />
 
-    <center>
-      <table>
-        <thead>
-          <tr>
-            <th>Dr. pepper</th>
-            <th>Milkis</th>
-            <th>YouUs Peach Aid</th>
-            <th>Ramune</th>
-            <th>Baja Blast Mountain Dew</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/3/36/Dr_Pepper_0%2C33l_Dose_Classic.png"
-                width="180"
-                alt="Dr.Pepper"
-              />
-            </td>
-            <td>
-              <img
-                src="https://cdn.glitch.global/1deb7e0e-1d46-4b0d-aa5f-7f2e3f128014/G03.png?v=1730388650902"
-                width="350"
-                alt="milki"
-              />
-            </td>
+        <img
+          src="https://i.pinimg.com/736x/03/33/10/03331071f54c2ab876474d88974031e9.jpg"
+          width="350"
+          height="350"
+        />
 
-            <td>
-              <img
-                src="https://hmartus.vtexassets.com/arquivos/ids/168797/880802403329--1-.png?v=638572729686770000"
-                width="300"
-                alt="Peach Aid"
-              />
-            </td>
-            <td>
-              <img
-                src="https://cdn.glitch.global/1deb7e0e-1d46-4b0d-aa5f-7f2e3f128014/71qBJRzD-UL.png?v=1730389113167"
-                width="320"
-                alt="Ramune"
-              />
-            </td>
-            <td>
-              <img
-                src="https://cdn.glitch.global/1deb7e0e-1d46-4b0d-aa5f-7f2e3f128014/0729f09c-2392-4057-a461-06965ce98344.730bbba0197e228c0bedad3593287210%20copy.png?v=1730389326501"
-                width="300"
-                alt="Mountain Dew"
-              />
-            </td>
-          </tr>
-        </tbody>
-        <tbody>
-          <tr>
-            <td>
-              9/10 <br />
-              It's only good from the can
-            </td>
-            <td>
-              7/10 <br />
-              It was pretty good but I wouldn't <br />
-              grab at it
-            </td>
-            <td>
-              4/10 <br />
-              To be fair I found out I was supposed to get a cup of ice with
-              <br />
-              it but I feel like it still would've been bad <br />
-              Do not recommend
-            </td>
-            <td>
-              10/10 <br />
-              So good I love this drink
-            </td>
-            <td>
-              2/10 <br />
-              I tried a sip of my friends and it was so nasty <br />
-              don't get it
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </center>
+        <img
+          src="https://images.fineartamerica.com/images/artworkimages/medium/3/grey-chartreux-kitten-indoors-wearing-diamond-tiara-and-necklace-jean-michel-labat.jpg"
+          width="250"
+          height="350"
+        />
+      </div>
+    </details>
   </body>
 </html>
